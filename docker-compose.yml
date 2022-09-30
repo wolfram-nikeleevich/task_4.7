@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  postgresql:
+    image: postgres:latest
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./data:/var/lib/postgres
+    environment:
+      POSTGRES_PASSWORD: trololo
+      POSTGRES_USER: app
