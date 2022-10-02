@@ -3,9 +3,10 @@ services:
   postgresql:
     image: postgres:latest
     ports:
-      - '8080:8080'
+      - '5432:5432'
     volumes:
-      - ./data:/var/lib/postgres
+      - ./data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: trololo
       POSTGRES_USER: app
+      POSTGRES_DB: db
